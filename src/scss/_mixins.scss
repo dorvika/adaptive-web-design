@@ -1,0 +1,32 @@
+@mixin fontSettings($font-weight: 400, $font-size: $font-size, $line-height: 22px, $text-color: $text-color) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $text-color;
+}
+
+@mixin flex ($direction: row, $align: center, $justify: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $align;
+    align-items: $justify;
+}
+
+@mixin respond ($breakpoint) {
+    @if $breakpoint==tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobileL {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileS {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  }
+}

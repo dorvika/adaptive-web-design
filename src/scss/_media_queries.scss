@@ -1,0 +1,91 @@
+@include respond(tablet){
+    .nav{
+        min-height: 80px;
+        &__list{
+            display: none;
+            position: absolute;
+            right: -100%;
+            top: 22px;
+            gap: 0;
+            flex-direction: column;
+            background: #F5F5F5;
+            width: 182px;
+            text-align: left;
+            transition: 0.3s;
+        }
+        &__link{
+            margin: 8px 10px;
+        }
+        &__list-item{
+            &:active{
+                background: #E5E5E5;
+            }
+        }
+    }
+    .nav__list.active{
+        display: block;
+        right: 0;
+    }
+    .hamburger__menu{
+        display: block;
+    }
+    .hamburger__menu.active .bar:nth-child(2){
+        opacity: 0
+    }
+    .hamburger__menu.active .bar:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger__menu.active .bar:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    .post__list{
+        grid-template-columns: fit-content(80%);
+    }
+    .portfolio__list-item:last-child{
+        display: none;
+    }
+}
+
+@include respond(mobileL){
+    .section__title{
+        &--small{
+            display: none;
+        }
+    }
+    .post{
+        &__content{
+            display: none;
+        }
+        &__link{
+            display: flex;
+            flex-direction: column;
+        }
+        &__title{
+            font-size: $mobile-font-size;
+        }
+        &__meta{
+            font-size: 11px
+        }
+    }
+}
+
+@include respond(mobileS){
+    .section__title{
+        font-size: $mobile-font-size;
+        padding: 35px 0 20px;
+    }
+    .portfolio__list-item:nth-child(2), 
+    .portfolio__list-item:nth-child(3){
+        display: none;
+    }
+
+    .footer{
+        &__text{
+            font-size: 12px;
+        }
+        &__contact-info{
+            font-size: $mobile-font-size;
+        }
+    }
+  
+}

@@ -1,0 +1,18 @@
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-family: $font;
+}
+
+.section__title{
+    @include fontSettings($font-weight: 700);
+    text-transform: uppercase;
+    padding: 50px 0 25px;
+    &--small{
+        font-size: 13px;
+    }
+    &--accent{
+        color: $footer-title-color;
+    }
+}

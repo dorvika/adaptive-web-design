@@ -1,0 +1,13 @@
+.portfolio{
+    &__section{
+        margin-bottom: 40px;
+    }
+    &__section-titles{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list{
+        display: flex;
+        gap: 10px;
+    }
+}

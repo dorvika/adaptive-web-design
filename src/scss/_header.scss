@@ -1,0 +1,39 @@
+.nav{
+    position: relative;
+    &__list{
+        @include flex;
+        gap: 7%;
+        margin: 40px 0;
+    }
+    &__link{
+        @include fontSettings($font-size: 11px);
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+        transition: 0.5s ease;
+        &:hover{
+            color: $accent-color;
+        }
+    }
+    
+}
+
+.hamburger__menu{
+    display: none;
+    cursor: pointer;
+    padding-top: 5px;
+    width: 44px;
+    height: 37px;
+    background: #000000;
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+
+.bar{
+    display: block;
+    width: 17px;
+    height: 2px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #FFFFFF;;
+}

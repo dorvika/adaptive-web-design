@@ -1,0 +1,22 @@
+.post{
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    &__link{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 20px;
+    }
+    &__title{
+        @include fontSettings($font-weight: 700, $line-height: 30px)
+    }
+    &__meta{
+        @include fontSettings($font-size: 12px, $line-height: 20px, $text-color: #7C7C7C)
+    }
+    &__content{
+        @include fontSettings($font-size: 14px, $line-height: 26px, $text-color: #5C5C5C);
+        margin-top: 10px;
+    }
+}
